@@ -29,6 +29,7 @@
 ├── AGENTS.md              ← 給其他 AI 工具的入口，內容指向本文件
 ├── README.md              ← 給人看的專案說明
 ├── CHANGELOG.md           ← 每次新增或修改都要記錄
+├── .nojekyll             ← 讓 GitHub Pages 直接提供原始檔，不要刪除
 ├── index.html             ← 首頁：依 data/pages.json 自動列出所有頁面
 ├── data/
 │   └── pages.json         ← 全站頁面清單（唯一的目錄來源）
