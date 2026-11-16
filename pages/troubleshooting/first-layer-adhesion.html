@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第一層不黏｜3D 列印實驗室手冊</title>
+  <meta name="description" content="第一層黏不住或被噴頭拖走，先查調平、Z 偏移與平台清潔">
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../../index.html"><span class="brand-mark"></span>3D 列印實驗室手冊</a>
+      <nav class="site-nav">
+        <a href="../../index.html#materials">線材</a>
+        <a href="../../index.html#printers">印表機</a>
+        <a href="../../index.html#troubleshooting">問題排解</a>
+        <a href="../../index.html#logs">實測紀錄</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="breadcrumb"><a href="../../index.html">首頁</a> / <a href="../../index.html#troubleshooting">問題排解</a> / 第一層不黏</p>
+    <h1>第一層不黏（First Layer Adhesion）</h1>
+    <p class="lead">第一層線條黏不上平台、捲起來，或被噴頭拖著走。</p>
+    <p class="meta-line"><span class="badge ref">參考值</span>最後更新：2026-11-16</p>
+
+    <!-- 必備區塊 1：症狀 -->
+    <h2>症狀</h2>
+    <ul>
+      <li>第一層線條是圓的、一條一條分開，沒有被壓扁成扁平帶狀</li>
+      <li>線條跟著噴頭被拖走，在噴嘴上纏成一團</li>
+      <li>印到一半整件脫離平台（與<a href="warping.html">翹曲</a>不同：翹曲是邊角慢慢翹起）</li>
+    </ul>
+
+    <!-- 必備區塊 2：可能原因（依常見程度排序，最常見放第一） -->
+    <h2>可能原因</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>原因</th><th>怎麼判斷</th></tr>
+        <tr><td>噴嘴離平台太遠（調平或 Z 偏移不正確）</td><td>第一層線條細而圓，線與線之間有縫隙</td></tr>
+        <tr><td>平台表面有油脂或殘膠</td><td>同一塊區域反覆黏不住；手摸過的地方特別明顯</td></tr>
+        <tr><td>熱床溫度太低</td><td>和線材頁的建議熱床溫度比對，低於下限</td></tr>
+        <tr><td>第一層速度太快</td><td>線條在轉角處被拉斷、拖走</td></tr>
+        <tr><td>噴嘴離平台太近</td><td>幾乎沒有出料、表面出現刮痕或半透明薄膜</td></tr>
+      </table>
+    </div>
+
+    <!-- 必備區塊 3：排除步驟（一次只改一個參數） -->
+    <h2>排除步驟</h2>
+    <div class="callout"><strong>原則</strong>一次只改一個參數，印小測試件確認後再改下一個。</div>
+    <ol class="steps">
+      <li>清潔平台：用酒精擦拭並等它揮發，取件時避免用手摸列印區。</li>
+      <li>重新調平；印第一層時在旁邊看，線條應該被輕微壓扁、彼此相連。</li>
+      <li>線條仍是圓的：Z 偏移每次往下調 0.02 mm；出現刮痕或不出料就往回調。</li>
+      <li>確認熱床溫度在材料建議範圍內，見各線材頁的「重點速查」。</li>
+      <li>在 Cura 把第一層速度降到一般速度的一半左右，並把第一層風扇關閉。</li>
+      <li>小零件或底面積小的零件加 Brim 增加接觸面積。</li>
+    </ol>
+
+    <!-- 必備區塊 4：預防方式 -->
+    <h2>預防方式</h2>
+    <ul>
+      <li>每次開印前都看第一層 1–2 分鐘，不對就立刻停止，省時間也省線材。</li>
+      <li>平台定期清潔；PETG 印完後清掉殘留的膠水層。</li>
+    </ul>
+
+    <!-- 必備區塊 5：相關頁面 -->
+    <h2>相關頁面</h2>
+    <ul class="related">
+      <li><a href="warping.html">翹曲</a></li>
+      <li><a href="../printers/flsun-v400.html">FLSUN V400</a></li>
+      <li><a href="../materials/pla.html">PLA</a></li>
+      <li><a href="../materials/petg.html">PETG</a></li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">數值僅供參考，實際以機台與切片軟體為準。最後更新：2026-11-16</div>
+  </footer>
+</body>
+</html>

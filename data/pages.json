@@ -83,6 +83,20 @@
     "updated": "2026-11-16"
   },
   {
+    "id": "first-layer-adhesion",
+    "section": "troubleshooting",
+    "title": "第一層不黏",
+    "path": "pages/troubleshooting/first-layer-adhesion.html",
+    "summary": "第一層黏不住或被噴頭拖走，先查調平、Z 偏移與平台清潔",
+    "tags": [
+      "第一層",
+      "調平",
+      "附著"
+    ],
+    "status": "參考值",
+    "updated": "2026-11-16"
+  },
+  {
     "id": "2026-10-weight-jar-thread",
     "section": "logs",
     "title": "重量實驗罐螺紋間隙",
