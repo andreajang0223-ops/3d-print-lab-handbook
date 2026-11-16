@@ -2,6 +2,7 @@
 
 最新的放最上面。格式：`- YYYY-MM-DD 新增／修改：頁面標題（路徑）`
 
+- 2026-11-16 修改：實測紀錄「重量實驗罐螺紋間隙（2026-10）」結論用詞，改為只寫實際觀察到的結果（pages/logs/2026-10-weight-jar-thread.html）
 - 2026-11-16 新增：問題排解「第一層不黏」（pages/troubleshooting/first-layer-adhesion.html）；修改：翹曲、PLA、PETG、FLSUN V400 加上回連
 - 2026-11-16 新增：實測紀錄「重量實驗罐螺紋間隙（2026-10）」（pages/logs/2026-10-weight-jar-thread.html）
 - 2026-11-16 新增：問題排解「拉絲」「翹曲」（pages/troubleshooting/）
