@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FLSUN V400｜3D 列印實驗室手冊</title>
+  <meta name="description" content="實驗室 Delta 印表機：圓形成型區，印大件前先看對角線">
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../../index.html"><span class="brand-mark"></span>3D 列印實驗室手冊</a>
+      <nav class="site-nav">
+        <a href="../../index.html#materials">線材</a>
+        <a href="../../index.html#printers">印表機</a>
+        <a href="../../index.html#troubleshooting">問題排解</a>
+        <a href="../../index.html#logs">實測紀錄</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="breadcrumb"><a href="../../index.html">首頁</a> / <a href="../../index.html#printers">印表機</a> / FLSUN V400</p>
+    <h1>FLSUN V400</h1>
+    <p class="lead">實驗室的大尺寸 Delta 印表機，適合大件與高件。</p>
+    <p class="meta-line"><span class="badge todo">待確認</span>最後更新：2026-11-16</p>
+
+    <!-- 必備區塊 1：規格速查表（不確定的規格寫「待確認」） -->
+    <h2>規格速查</h2>
+    <div class="table-wrap">
+      <table class="quick">
+        <tr><td>結構</td><td>Delta（三角洲）</td></tr>
+        <tr><td>成型範圍</td><td>直徑 300 mm × 高 410 mm（實驗室使用的設定值）</td></tr>
+        <tr><td>噴嘴</td><td>待確認（請依機台上實際安裝的噴嘴填寫）</td></tr>
+        <tr><td>最高噴頭／熱床溫度</td><td>待確認（請查官方說明書）</td></tr>
+        <tr><td>切片軟體</td><td>UltiMaker Cura</td></tr>
+        <tr><td>可用材料</td><td><a href="../materials/pla.html">PLA</a>（已實測）、<a href="../materials/petg.html">PETG</a>、<a href="../materials/tpu.html">TPU</a></td></tr>
+      </table>
+    </div>
+
+    <!-- 必備區塊 2：使用前檢查 -->
+    <h2>使用前檢查</h2>
+    <ol class="steps">
+      <li>確認平台乾淨、沒有上一位留下的殘料或膠水結塊。</li>
+      <li>確認線材種類與切片設定一致（PLA 檔不要拿去印 PETG）。</li>
+      <li>在 Cura 檢查零件是否完全落在圓形成型範圍內：底面要看<strong>對角線</strong>，不是只看長或寬。</li>
+      <li>印前執行調平（Auto Level），第一層開始時在旁邊看 1–2 分鐘。</li>
+    </ol>
+
+    <!-- 必備區塊 3：操作注意事項 -->
+    <h2>操作注意事項</h2>
+    <ul>
+      <li>Delta 機台的圓形平台邊緣最容易出問題，大件盡量放在中心。</li>
+      <li>長時間列印（超過 6 小時）開始前，確認線材剩餘量足夠。</li>
+      <li>取件等平台降溫後再取，避免拉壞平台表面。</li>
+    </ul>
+
+    <!-- 必備區塊 4：已知限制 -->
+    <h2>已知限制</h2>
+    <div class="callout warn"><strong>成型區是圓形</strong>250 × 180 mm 的底面看似比 300 mm 小，但對角線約 308 mm，放不進去。超出時可改擺放方向、拆件或縮小比例。</div>
+
+    <!-- 必備區塊 5：資料來源 -->
+    <h2>資料來源</h2>
+    <ul class="sources">
+      <li>成型範圍為實驗室課程作業中使用的設定值；其餘規格待依官方說明書確認。</li>
+      <li>實測：<a href="../logs/2026-10-weight-jar-thread.html">2026-10 重量實驗罐螺紋間隙</a>。</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">數值僅供參考，實際以機台與切片軟體為準。最後更新：2026-11-16</div>
+  </footer>
+</body>
+</html>

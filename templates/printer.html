@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{機台名稱}}｜3D 列印實驗室手冊</title>
+  <meta name="description" content="{{與 pages.json 的 summary 相同}}">
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../../index.html"><span class="brand-mark"></span>3D 列印實驗室手冊</a>
+      <nav class="site-nav">
+        <a href="../../index.html#materials">線材</a>
+        <a href="../../index.html#printers">印表機</a>
+        <a href="../../index.html#troubleshooting">問題排解</a>
+        <a href="../../index.html#logs">實測紀錄</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="breadcrumb"><a href="../../index.html">首頁</a> / <a href="../../index.html#printers">印表機</a> / {{機台名稱}}</p>
+    <h1>{{機台名稱}}</h1>
+    <p class="lead">{{一句話：這台機器的定位與擺放位置}}</p>
+    <p class="meta-line"><span class="badge {{ref|tested|todo}}">{{參考值|實測|待確認}}</span>最後更新：{{YYYY-MM-DD}}</p>
+
+    <!-- 必備區塊 1：規格速查表（不確定的規格寫「待確認」） -->
+    <h2>規格速查</h2>
+    <div class="table-wrap">
+      <table class="quick">
+        <tr><td>結構</td><td>{{例如 Delta 三角洲}}</td></tr>
+        <tr><td>成型範圍</td><td>{{例如 直徑 300 mm × 高 410 mm}}</td></tr>
+        <tr><td>噴嘴</td><td>{{例如 0.4 mm}}</td></tr>
+        <tr><td>切片軟體</td><td>{{例如 UltiMaker Cura}}</td></tr>
+        <tr><td>可用材料</td><td>{{連到線材頁}}</td></tr>
+      </table>
+    </div>
+
+    <!-- 必備區塊 2：使用前檢查 -->
+    <h2>使用前檢查</h2>
+    <ol class="steps">
+      <li>{{步驟}}</li>
+    </ol>
+
+    <!-- 必備區塊 3：操作注意事項 -->
+    <h2>操作注意事項</h2>
+    <ul>
+      <li>{{注意事項}}</li>
+    </ul>
+
+    <!-- 必備區塊 4：已知限制 -->
+    <h2>已知限制</h2>
+    <div class="callout warn"><strong>{{限制標題}}</strong>{{說明與因應方式}}</div>
+
+    <!-- 必備區塊 5：資料來源 -->
+    <h2>資料來源</h2>
+    <ul class="sources">
+      <li>{{官方說明書或實測紀錄連結}}</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">數值僅供參考，實際以機台與切片軟體為準。最後更新：{{YYYY-MM-DD}}</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{問題名稱}}｜3D 列印實驗室手冊</title>
+  <meta name="description" content="{{與 pages.json 的 summary 相同}}">
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../../index.html"><span class="brand-mark"></span>3D 列印實驗室手冊</a>
+      <nav class="site-nav">
+        <a href="../../index.html#materials">線材</a>
+        <a href="../../index.html#printers">印表機</a>
+        <a href="../../index.html#troubleshooting">問題排解</a>
+        <a href="../../index.html#logs">實測紀錄</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="breadcrumb"><a href="../../index.html">首頁</a> / <a href="../../index.html#troubleshooting">問題排解</a> / {{問題名稱}}</p>
+    <h1>{{問題名稱}}（{{英文名稱}}）</h1>
+    <p class="lead">{{一句話描述這個失敗長什麼樣子}}</p>
+    <p class="meta-line"><span class="badge {{ref|tested|todo}}">{{參考值|實測|待確認}}</span>最後更新：{{YYYY-MM-DD}}</p>
+
+    <!-- 必備區塊 1：症狀 -->
+    <h2>症狀</h2>
+    <ul>
+      <li>{{肉眼可以看到的現象}}</li>
+    </ul>
+
+    <!-- 必備區塊 2：可能原因（依常見程度排序，最常見放第一） -->
+    <h2>可能原因</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>原因</th><th>怎麼判斷</th></tr>
+        <tr><td>{{原因}}</td><td>{{判斷方式}}</td></tr>
+      </table>
+    </div>
+
+    <!-- 必備區塊 3：排除步驟（一次只改一個參數） -->
+    <h2>排除步驟</h2>
+    <div class="callout"><strong>原則</strong>一次只改一個參數，印小測試件確認後再改下一個。</div>
+    <ol class="steps">
+      <li>{{步驟與建議調整幅度}}</li>
+    </ol>
+
+    <!-- 必備區塊 4：預防方式 -->
+    <h2>預防方式</h2>
+    <ul>
+      <li>{{預防方式}}</li>
+    </ul>
+
+    <!-- 必備區塊 5：相關頁面 -->
+    <h2>相關頁面</h2>
+    <ul class="related">
+      <li><a href="../materials/{{id}}.html">{{頁面標題}}</a></li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">數值僅供參考，實際以機台與切片軟體為準。最後更新：{{YYYY-MM-DD}}</div>
+  </footer>
+</body>
+</html>

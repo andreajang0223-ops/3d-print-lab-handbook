@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{紀錄標題}}｜3D 列印實驗室手冊</title>
+  <meta name="description" content="{{與 pages.json 的 summary 相同}}">
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../../index.html"><span class="brand-mark"></span>3D 列印實驗室手冊</a>
+      <nav class="site-nav">
+        <a href="../../index.html#materials">線材</a>
+        <a href="../../index.html#printers">印表機</a>
+        <a href="../../index.html#troubleshooting">問題排解</a>
+        <a href="../../index.html#logs">實測紀錄</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="breadcrumb"><a href="../../index.html">首頁</a> / <a href="../../index.html#logs">實測紀錄</a> / {{紀錄標題}}</p>
+    <h1>{{紀錄標題}}</h1>
+    <p class="lead">{{一句話結論，例如：螺紋徑向間隙 0.9 mm 才轉得順}}</p>
+    <p class="meta-line"><span class="badge tested">實測</span>實測日期：{{YYYY-MM}}｜最後更新：{{YYYY-MM-DD}}</p>
+
+    <!-- 必備區塊 1：目的 -->
+    <h2>目的</h2>
+    <p>{{為什麼要測這件事}}</p>
+
+    <!-- 必備區塊 2：條件 -->
+    <h2>條件</h2>
+    <div class="table-wrap">
+      <table class="quick">
+        <tr><td>機台</td><td>{{連到印表機頁}}</td></tr>
+        <tr><td>材料</td><td>{{連到線材頁}}</td></tr>
+        <tr><td>切片軟體</td><td>{{例如 UltiMaker Cura}}</td></tr>
+        <tr><td>關鍵參數</td><td>{{層高、填充、溫度等}}</td></tr>
+      </table>
+    </div>
+
+    <!-- 必備區塊 3：過程與數據（失敗的嘗試也要寫） -->
+    <h2>過程與數據</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>版本</th><th>設定</th><th>結果</th></tr>
+        <tr><td>{{v1}}</td><td>{{設定}}</td><td>{{結果}}</td></tr>
+      </table>
+    </div>
+
+    <!-- 必備區塊 4：結論 -->
+    <h2>結論</h2>
+    <div class="callout"><strong>{{結論標題}}</strong>{{可以直接套用的結論}}</div>
+
+    <!-- 必備區塊 5：下次建議 -->
+    <h2>下次建議</h2>
+    <ul>
+      <li>{{還沒測、下次可以改進的地方}}</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">數值僅供參考，實際以機台與切片軟體為準。最後更新：{{YYYY-MM-DD}}</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>拉絲（Stringing）｜3D 列印實驗室手冊</title>
+  <meta name="description" content="零件之間出現細絲或蜘蛛網，先查受潮、溫度與回抽">
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../../index.html"><span class="brand-mark"></span>3D 列印實驗室手冊</a>
+      <nav class="site-nav">
+        <a href="../../index.html#materials">線材</a>
+        <a href="../../index.html#printers">印表機</a>
+        <a href="../../index.html#troubleshooting">問題排解</a>
+        <a href="../../index.html#logs">實測紀錄</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="breadcrumb"><a href="../../index.html">首頁</a> / <a href="../../index.html#troubleshooting">問題排解</a> / 拉絲</p>
+    <h1>拉絲（Stringing）</h1>
+    <p class="lead">噴頭移動時漏出細絲，零件之間像蜘蛛網。</p>
+    <p class="meta-line"><span class="badge ref">參考值</span>最後更新：2026-11-16</p>
+
+    <!-- 必備區塊 1：症狀 -->
+    <h2>症狀</h2>
+    <ul>
+      <li>兩個柱子之間有細絲連著</li>
+      <li>表面有細毛、小顆粒（Blob）</li>
+      <li>PETG、TPU 特別明顯</li>
+    </ul>
+
+    <!-- 必備區塊 2：可能原因（依常見程度排序） -->
+    <h2>可能原因</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>原因</th><th>怎麼判斷</th></tr>
+        <tr><td>線材受潮</td><td>列印時有細微劈啪聲、表面起泡；開封很久沒密封</td></tr>
+        <tr><td>噴頭溫度太高</td><td>降低 5 °C 後拉絲明顯減少</td></tr>
+        <tr><td>回抽不足</td><td>回抽距離很小或關閉；移動距離長的地方特別嚴重</td></tr>
+        <tr><td>移動速度太慢</td><td>空跑速度低，噴頭在空中停留久</td></tr>
+      </table>
+    </div>
+
+    <!-- 必備區塊 3：排除步驟 -->
+    <h2>排除步驟</h2>
+    <div class="callout"><strong>原則</strong>一次只改一個參數，印小測試件確認後再改下一個。</div>
+    <ol class="steps">
+      <li>先烘乾線材（或換一捲剛開封的）再印一次，排除受潮。</li>
+      <li>噴頭溫度每次降 5 °C，直到拉絲減少但層間仍黏得牢。</li>
+      <li>回抽距離每次加 0.5 mm（近程擠出）或 1 mm（遠程擠出），不要一次加太多以免卡料。</li>
+      <li>提高空跑速度；Cura 可開啟「梳理模式（Combing）」讓噴頭盡量走在零件內部。</li>
+    </ol>
+
+    <!-- 必備區塊 4：預防方式 -->
+    <h2>預防方式</h2>
+    <ul>
+      <li>線材用完立刻放回密封袋＋乾燥劑。</li>
+      <li>新線材先印溫度塔找最佳溫度。</li>
+    </ul>
+
+    <!-- 必備區塊 5：相關頁面 -->
+    <h2>相關頁面</h2>
+    <ul class="related">
+      <li><a href="../materials/petg.html">PETG</a></li>
+      <li><a href="../materials/tpu.html">TPU</a></li>
+      <li><a href="../materials/pla.html">PLA</a></li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">數值僅供參考，實際以機台與切片軟體為準。最後更新：2026-11-16</div>
+  </footer>
+</body>
+</html>

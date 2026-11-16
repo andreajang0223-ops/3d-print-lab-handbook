@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D 列印實驗室手冊</title>
+  <meta name="description" content="工業設計系實驗室的 3D 列印知識手冊：線材設定、印表機注意事項、問題排解與實測紀錄。">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="brand-mark"></span>3D 列印實驗室手冊</a>
+      <nav class="site-nav">
+        <a href="#materials">線材</a>
+        <a href="#printers">印表機</a>
+        <a href="#troubleshooting">問題排解</a>
+        <a href="#logs">實測紀錄</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>印之前先查一下，少印一次失敗品。</h1>
+      <p>工設系實驗室的 3D 列印筆記：材料怎麼設定、機台有什麼限制、拉絲翹曲怎麼排除，以及我們實際印過、量過的數據。每頁都標示資料是「參考值」還是「實測」。</p>
+      <input id="search" class="search" type="search" placeholder="搜尋材料、問題或標籤，例如：PETG、拉絲、螺紋">
+      <p class="meta-line" id="latest"></p>
+    </section>
+
+    <div id="sections"><p class="empty">載入中…</p></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      本網站內容依 <a href="https://github.com/andreajang0223-ops/3d-print-lab-handbook/blob/main/CLAUDE.md">CLAUDE.md</a> 的規則維護。數值僅供參考，實際以機台與切片軟體為準。
+    </div>
+  </footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>

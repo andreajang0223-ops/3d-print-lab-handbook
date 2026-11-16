@@ -1,0 +1,99 @@
+[
+  {
+    "id": "petg",
+    "section": "materials",
+    "title": "PETG",
+    "path": "pages/materials/petg.html",
+    "summary": "韌性好、不易脆裂，適合卡扣與功能件，但容易拉絲",
+    "tags": [
+      "韌性",
+      "功能件",
+      "卡扣"
+    ],
+    "status": "參考值",
+    "updated": "2026-11-16"
+  },
+  {
+    "id": "pla",
+    "section": "materials",
+    "title": "PLA",
+    "path": "pages/materials/pla.html",
+    "summary": "最容易印的線材，外觀模型與尺寸測試件的首選",
+    "tags": [
+      "入門",
+      "外觀模型",
+      "易列印"
+    ],
+    "status": "參考值",
+    "updated": "2026-11-16"
+  },
+  {
+    "id": "tpu",
+    "section": "materials",
+    "title": "TPU",
+    "path": "pages/materials/tpu.html",
+    "summary": "可彎折的軟料，適合止滑墊、緩衝件與軟殼，要慢速列印",
+    "tags": [
+      "軟料",
+      "彈性",
+      "慢速"
+    ],
+    "status": "參考值",
+    "updated": "2026-11-16"
+  },
+  {
+    "id": "flsun-v400",
+    "section": "printers",
+    "title": "FLSUN V400",
+    "path": "pages/printers/flsun-v400.html",
+    "summary": "實驗室 Delta 印表機：圓形成型區，印大件前先看對角線",
+    "tags": [
+      "Delta",
+      "大尺寸"
+    ],
+    "status": "待確認",
+    "updated": "2026-11-16"
+  },
+  {
+    "id": "stringing",
+    "section": "troubleshooting",
+    "title": "拉絲",
+    "path": "pages/troubleshooting/stringing.html",
+    "summary": "零件之間出現細絲或蜘蛛網，先查受潮、溫度與回抽",
+    "tags": [
+      "外觀",
+      "回抽",
+      "受潮"
+    ],
+    "status": "參考值",
+    "updated": "2026-11-16"
+  },
+  {
+    "id": "warping",
+    "section": "troubleshooting",
+    "title": "翹曲",
+    "path": "pages/troubleshooting/warping.html",
+    "summary": "零件邊角從平台翹起，先查第一層、熱床溫度與冷風",
+    "tags": [
+      "第一層",
+      "附著",
+      "收縮"
+    ],
+    "status": "參考值",
+    "updated": "2026-11-16"
+  },
+  {
+    "id": "2026-10-weight-jar-thread",
+    "section": "logs",
+    "title": "重量實驗罐螺紋間隙",
+    "path": "pages/logs/2026-10-weight-jar-thread.html",
+    "summary": "PLA 旋蓋螺紋太緊旋不上，徑向間隙 0.9 mm 才順",
+    "tags": [
+      "螺紋",
+      "公差",
+      "PLA"
+    ],
+    "status": "實測",
+    "updated": "2026-11-16"
+  }
+]

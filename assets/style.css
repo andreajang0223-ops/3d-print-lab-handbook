@@ -1,0 +1,160 @@
+/* =========================================================
+   3D 列印實驗室手冊｜全站唯一樣式表
+   新樣式請加在對應區段，並寫一行註解說明用途（見 CLAUDE.md 第 9 節）
+   ========================================================= */
+
+/* ---------- 1. 色彩與字體 ---------- */
+:root {
+  --paper: #f7f5f0;
+  --card: #ffffff;
+  --ink: #1d1d1b;
+  --muted: #6b6a66;
+  --line: #d9d5cc;
+  --accent: #d2502a;        /* 熱噴頭橘：連結、重點 */
+  --accent-soft: #fbe9e2;
+  --ok: #2f6f4f;
+  --ok-soft: #e3f0e8;
+  --warn: #9a5b00;
+  --warn-soft: #fdf1dc;
+  --grid: rgba(29, 29, 27, 0.045);
+  --radius: 10px;
+  --mono: "JetBrains Mono", "Consolas", monospace;
+  --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #171716;
+    --card: #20201e;
+    --ink: #ecebe6;
+    --muted: #a3a29c;
+    --line: #3a3935;
+    --accent: #f07a52;
+    --accent-soft: #3a241c;
+    --ok: #7fc39d;
+    --ok-soft: #1d2f25;
+    --warn: #e6b45c;
+    --warn-soft: #33281a;
+    --grid: rgba(236, 235, 230, 0.05);
+  }
+}
+
+/* ---------- 2. 基本排版 ---------- */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--ink);
+  background-color: var(--paper);
+  /* 方格紙背景，呼應列印平台 */
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+h1, h2, h3 { line-height: 1.35; letter-spacing: 0.01em; }
+h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0.2em 0 0.3em; }
+h2 { font-size: 1.3rem; margin: 2.2em 0 0.6em; padding-top: 0.6em; border-top: 1px solid var(--line); }
+h3 { font-size: 1.08rem; margin: 1.6em 0 0.4em; }
+code, .mono { font-family: var(--mono); font-size: 0.92em; }
+p { margin: 0.6em 0; }
+
+/* ---------- 3. 版面 ---------- */
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+.site-header {
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; z-index: 10;
+}
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 56px; }
+.brand { font-weight: 700; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+.brand-mark {
+  width: 22px; height: 22px; border-radius: 4px;
+  background: repeating-linear-gradient(0deg, var(--accent) 0 3px, transparent 3px 5px);
+}
+.site-nav { display: flex; gap: 14px; font-size: 0.92rem; overflow-x: auto; white-space: nowrap; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--accent); }
+main { padding: 28px 0 56px; }
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; padding: 20px 0 32px; }
+
+/* ---------- 4. 首頁 ---------- */
+.hero { padding: 28px 0 8px; }
+.hero p { color: var(--muted); max-width: 40em; }
+.search {
+  width: 100%; margin: 16px 0 4px; padding: 12px 14px;
+  font: inherit; color: var(--ink);
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+}
+.search:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.section-block h2 { display: flex; align-items: baseline; gap: 10px; }
+.section-block h2 .count { font-size: 0.85rem; color: var(--muted); font-weight: 400; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.card {
+  display: block; padding: 14px 16px; text-decoration: none; color: var(--ink);
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  transition: border-color .15s, transform .15s;
+}
+.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.card .title { font-weight: 700; display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+.card .summary { color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
+.card .tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-size: 0.75rem; padding: 1px 8px; border-radius: 99px; border: 1px solid var(--line); color: var(--muted); }
+.empty { color: var(--muted); font-size: 0.9rem; }
+
+/* ---------- 5. 內容頁元件 ---------- */
+.breadcrumb { font-size: 0.85rem; color: var(--muted); }
+.breadcrumb a { color: var(--muted); }
+.lead { font-size: 1.05rem; color: var(--muted); }
+.meta-line { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; font-size: 0.85rem; color: var(--muted); }
+
+/* 狀態標籤：參考值／實測／待確認 */
+.badge { font-size: 0.75rem; padding: 2px 9px; border-radius: 99px; white-space: nowrap; border: 1px solid currentColor; }
+.badge.ref { color: var(--muted); }
+.badge.tested { color: var(--ok); background: var(--ok-soft); }
+.badge.todo { color: var(--warn); background: var(--warn-soft); }
+
+/* 速查表 */
+.table-wrap { overflow-x: auto; margin: 12px 0; }
+table { border-collapse: collapse; width: 100%; background: var(--card); font-size: 0.95rem; }
+th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; vertical-align: top; }
+th { background: var(--paper); font-weight: 600; white-space: nowrap; }
+table.quick td:first-child { font-weight: 600; white-space: nowrap; width: 9em; }
+
+/* 注意事項 */
+.callout { background: var(--accent-soft); border-left: 4px solid var(--accent); padding: 10px 14px; border-radius: 0 var(--radius) var(--radius) 0; margin: 14px 0; }
+.callout.warn { background: var(--warn-soft); border-left-color: var(--warn); }
+.callout strong:first-child { display: block; margin-bottom: 2px; }
+
+/* 有序步驟 */
+ol.steps { counter-reset: step; list-style: none; padding: 0; }
+ol.steps > li { counter-increment: step; position: relative; padding: 2px 0 10px 40px; }
+ol.steps > li::before {
+  content: counter(step); position: absolute; left: 0; top: 2px;
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--ink); color: var(--paper);
+  font-size: 0.8rem; font-weight: 700; display: grid; place-items: center;
+}
+
+/* 相關頁面 */
+.related { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
+.related a { display: inline-block; padding: 6px 12px; border: 1px solid var(--line); border-radius: 99px; background: var(--card); text-decoration: none; font-size: 0.9rem; }
+.related a:hover { border-color: var(--accent); }
+
+/* 兩欄：適合／不適合 */
+.pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pros-cons > div { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px 16px; }
+.pros-cons h3 { margin-top: 0.4em; }
+@media (max-width: 600px) { .pros-cons { grid-template-columns: 1fr; } }
+
+/* 圖片與圖說 */
+figure { margin: 16px 0; }
+figure img { max-width: 100%; border-radius: var(--radius); border: 1px solid var(--line); }
+figcaption { font-size: 0.85rem; color: var(--muted); }
+
+/* 資料來源 */
+.sources { font-size: 0.88rem; color: var(--muted); }

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PLA｜3D 列印實驗室手冊</title>
+  <meta name="description" content="最容易印的線材，外觀模型與尺寸測試件的首選">
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../../index.html"><span class="brand-mark"></span>3D 列印實驗室手冊</a>
+      <nav class="site-nav">
+        <a href="../../index.html#materials">線材</a>
+        <a href="../../index.html#printers">印表機</a>
+        <a href="../../index.html#troubleshooting">問題排解</a>
+        <a href="../../index.html#logs">實測紀錄</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="breadcrumb"><a href="../../index.html">首頁</a> / <a href="../../index.html#materials">線材</a> / PLA</p>
+    <h1>PLA</h1>
+    <p class="lead">最容易印、表面漂亮，外觀模型與尺寸測試件的第一選擇。</p>
+    <p class="meta-line"><span class="badge ref">參考值</span>最後更新：2026-11-16</p>
+
+    <!-- 必備區塊 1：重點速查表 -->
+    <h2>重點速查</h2>
+    <div class="table-wrap">
+      <table class="quick">
+        <tr><td>噴頭溫度</td><td>200–220 °C</td></tr>
+        <tr><td>熱床溫度</td><td>50–60 °C</td></tr>
+        <tr><td>冷卻風扇</td><td>100%，第一層關閉或調低</td></tr>
+        <tr><td>列印速度</td><td>一般 50–80 mm/s；高速機台依機台設定</td></tr>
+        <tr><td>密度</td><td>1.24 g/cm³</td></tr>
+        <tr><td>保存</td><td>密封袋＋乾燥劑；受潮會變脆、表面起泡</td></tr>
+      </table>
+    </div>
+
+    <!-- 必備區塊 2：適合／不適合用途 -->
+    <h2>適合與不適合的用途</h2>
+    <div class="pros-cons">
+      <div>
+        <h3>適合</h3>
+        <ul>
+          <li>外觀模型、比例模型、展示用原型</li>
+          <li>尺寸與組裝測試件（先用 PLA 驗證，再換功能材料）</li>
+          <li>實驗用治具與容器（不受熱、不受衝擊）</li>
+        </ul>
+      </div>
+      <div>
+        <h3>不適合</h3>
+        <ul>
+          <li>放在車內、熱水附近等高溫環境：約 55–60 °C 開始軟化變形</li>
+          <li>需要反覆彎折的卡扣或鉸鏈：容易脆斷</li>
+          <li>長時間戶外日曬</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 必備區塊 3：實驗室建議設定 -->
+    <h2>實驗室建議設定</h2>
+    <p>實驗室實測：FLSUN V400／UltiMaker Cura，白色 PLA，2026-10。</p>
+    <ul>
+      <li>螺紋、旋蓋等需要配合的零件，間隙要比 CAD 預設大：旋蓋螺紋徑向間隙 0.9 mm 才轉得順，見<a href="../logs/2026-10-weight-jar-thread.html">實測紀錄：重量實驗罐螺紋間隙</a>。</li>
+      <li>同一批要做多個相同零件時，先印 1 個確認尺寸，再整批列印。</li>
+    </ul>
+
+    <!-- 必備區塊 4：常見問題 -->
+    <h2>常見問題</h2>
+    <ul>
+      <li><a href="../troubleshooting/stringing.html">拉絲</a>：溫度偏高或回抽不足時，PLA 也會牽細絲，但通常比 PETG 輕微。</li>
+      <li><a href="../troubleshooting/warping.html">翹曲</a>：大面積平板零件偶爾發生，加 Brim 通常可解決。</li>
+    </ul>
+
+    <!-- 必備區塊 5：資料來源 -->
+    <h2>資料來源</h2>
+    <ul class="sources">
+      <li>一般常見參考值，整理自線材廠商建議範圍；不同品牌請以線材包裝標示為準。</li>
+      <li>實測數據見 <a href="../logs/2026-10-weight-jar-thread.html">2026-10 重量實驗罐螺紋間隙</a>。</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">數值僅供參考，實際以機台與切片軟體為準。最後更新：2026-11-16</div>
+  </footer>
+</body>
+</html>

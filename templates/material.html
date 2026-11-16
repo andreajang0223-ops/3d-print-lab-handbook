@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{材料名稱}}｜3D 列印實驗室手冊</title>
+  <meta name="description" content="{{與 pages.json 的 summary 相同}}">
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../../index.html"><span class="brand-mark"></span>3D 列印實驗室手冊</a>
+      <nav class="site-nav">
+        <a href="../../index.html#materials">線材</a>
+        <a href="../../index.html#printers">印表機</a>
+        <a href="../../index.html#troubleshooting">問題排解</a>
+        <a href="../../index.html#logs">實測紀錄</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="breadcrumb"><a href="../../index.html">首頁</a> / <a href="../../index.html#materials">線材</a> / {{材料名稱}}</p>
+    <h1>{{材料名稱}}</h1>
+    <p class="lead">{{一句話說明這個材料的定位，例如：最容易印、最適合外觀模型}}</p>
+    <p class="meta-line"><span class="badge {{ref|tested|todo}}">{{參考值|實測|待確認}}</span>最後更新：{{YYYY-MM-DD}}</p>
+
+    <!-- 必備區塊 1：重點速查表 -->
+    <h2>重點速查</h2>
+    <div class="table-wrap">
+      <table class="quick">
+        <tr><td>噴頭溫度</td><td>{{例如 200–220 °C}}</td></tr>
+        <tr><td>熱床溫度</td><td>{{例如 55–65 °C}}</td></tr>
+        <tr><td>冷卻風扇</td><td>{{例如 100%，第一層關閉}}</td></tr>
+        <tr><td>列印速度</td><td>{{例如 50–80 mm/s}}</td></tr>
+        <tr><td>密度</td><td>{{例如 1.24 g/cm³}}</td></tr>
+        <tr><td>保存</td><td>{{例如 密封袋＋乾燥劑}}</td></tr>
+      </table>
+    </div>
+
+    <!-- 必備區塊 2：適合／不適合用途 -->
+    <h2>適合與不適合的用途</h2>
+    <div class="pros-cons">
+      <div>
+        <h3>適合</h3>
+        <ul>
+          <li>{{用途}}</li>
+        </ul>
+      </div>
+      <div>
+        <h3>不適合</h3>
+        <ul>
+          <li>{{用途與原因}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 必備區塊 3：實驗室建議設定（實測過才寫數值，否則寫「尚未實測」） -->
+    <h2>實驗室建議設定</h2>
+    <p>{{機台、切片軟體與日期，例如：FLSUN V400／UltiMaker Cura，2026-10 實測}}</p>
+    <ul>
+      <li>{{設定與理由}}</li>
+    </ul>
+
+    <!-- 必備區塊 4：常見問題（連到 troubleshooting 頁） -->
+    <h2>常見問題</h2>
+    <ul>
+      <li><a href="../troubleshooting/{{id}}.html">{{問題名稱}}</a>：{{這個材料為什麼容易遇到}}</li>
+    </ul>
+
+    <!-- 必備區塊 5：資料來源 -->
+    <h2>資料來源</h2>
+    <ul class="sources">
+      <li>{{來源名稱與連結；實測請寫日期與紀錄頁連結}}</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">數值僅供參考，實際以機台與切片軟體為準。最後更新：{{YYYY-MM-DD}}</div>
+  </footer>
+</body>
+</html>

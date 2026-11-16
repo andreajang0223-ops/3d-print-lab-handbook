@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>重量實驗罐螺紋間隙（2026-10）｜3D 列印實驗室手冊</title>
+  <meta name="description" content="PLA 旋蓋螺紋太緊旋不上，徑向間隙 0.9 mm 才順">
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../../index.html"><span class="brand-mark"></span>3D 列印實驗室手冊</a>
+      <nav class="site-nav">
+        <a href="../../index.html#materials">線材</a>
+        <a href="../../index.html#printers">印表機</a>
+        <a href="../../index.html#troubleshooting">問題排解</a>
+        <a href="../../index.html#logs">實測紀錄</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="breadcrumb"><a href="../../index.html">首頁</a> / <a href="../../index.html#logs">實測紀錄</a> / 重量實驗罐螺紋間隙</p>
+    <h1>重量實驗罐螺紋間隙（2026-10）</h1>
+    <p class="lead">螺紋徑向間隙 0.9 mm，罐蓋才旋得順。</p>
+    <p class="meta-line"><span class="badge tested">實測</span>實測日期：2026-10｜最後更新：2026-11-16</p>
+
+    <!-- 必備區塊 1：目的 -->
+    <h2>目的</h2>
+    <p>為重量比較實驗製作 8 個外觀相同、不透明的旋蓋罐，內部用泡棉固定金屬配重，讓每罐總重落在 170–230 g。罐蓋必須能順利旋上旋下，受測者才能正常操作。</p>
+
+    <!-- 必備區塊 2：條件 -->
+    <h2>條件</h2>
+    <div class="table-wrap">
+      <table class="quick">
+        <tr><td>機台</td><td><a href="../printers/flsun-v400.html">FLSUN V400</a></td></tr>
+        <tr><td>材料</td><td><a href="../materials/pla.html">PLA</a>（白色）</td></tr>
+        <tr><td>建模／切片</td><td>Autodesk Fusion／UltiMaker Cura</td></tr>
+        <tr><td>零件</td><td>旋蓋罐身＋罐蓋（內外螺紋配合），共 8 組</td></tr>
+      </table>
+    </div>
+
+    <!-- 必備區塊 3：過程與數據（失敗的嘗試也要寫） -->
+    <h2>過程與數據</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>版本</th><th>設定</th><th>結果</th></tr>
+        <tr><td>前幾版</td><td>螺紋間隙較小（較緊）</td><td>罐蓋旋不上去，無法使用</td></tr>
+        <tr><td>定案版</td><td>螺紋徑向間隙 0.9 mm</td><td>罐蓋可順利旋上旋下，罐身定稿，8 組依此列印</td></tr>
+      </table>
+    </div>
+
+    <!-- 必備區塊 4：結論 -->
+    <h2>結論</h2>
+    <div class="callout"><strong>PLA 旋蓋螺紋：徑向間隙先從 0.9 mm 開始</strong>在 FLSUN V400 上用 PLA 印內外螺紋，CAD 預設的小間隙會旋不上；0.9 mm 徑向間隙可以順利旋合。</div>
+
+    <!-- 必備區塊 5：下次建議 -->
+    <h2>下次建議</h2>
+    <ul>
+      <li>先單獨印一圈螺紋測試環（只印螺紋段），比整個罐子省時間省線材。</li>
+      <li>可以測試 0.7、0.8 mm 是否也能旋合，找出更緊密但仍順手的間隙。</li>
+      <li>換材料（例如 PETG）時需重新測試，不能直接沿用 0.9 mm。</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">數值僅供參考，實際以機台與切片軟體為準。最後更新：2026-11-16</div>
+  </footer>
+</body>
+</html>
